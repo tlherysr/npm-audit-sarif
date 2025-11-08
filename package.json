@@ -13,7 +13,9 @@
         "lint-fix": "eslint --fix .  --ext .js",
         "sonar": "sonar-scanner -X",
         "test": "jest --coverage",
-        "ver": "npm version patch --no-git-tag-version"
+        "ver": "npm version patch --no-git-tag-version",
+        "prepare": "npm run build",
+        "prepack": "npm run build"
     },
     "keywords": [
         "NPM",
