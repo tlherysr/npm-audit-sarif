@@ -1,5 +1,3 @@
-
-
 const fs = require('fs')
 const {
     SarifBuilder,
@@ -94,15 +92,25 @@ export function exportSarif(filename:string, outputfilename:string,rootdir:strin
                 }
             }
 
-            let level = "error";
-            if (via.severity == "moderate") {
-                level = "info";
-            }
-            if (via.severity == "high") {
-                level = "warning";
-            }
-            if (via.severity == "critical") {
-                level = "error";
+            // Map npm audit severities to SARIF allowed levels: none, note, warning, error
+            let level = 'note';
+            const sev = (via.severity || '').toLowerCase();
+            switch (sev) {
+                case 'low':
+                    level = 'note';
+                    break;
+                case 'moderate':
+                    level = 'warning';
+                    break;
+                case 'high':
+                    level = 'warning';
+                    break;
+                case 'critical':
+                    level = 'error';
+                    break;
+                default:
+                    // fallback to note for unknown severities
+                    level = 'note';
             }
         
             const ruleId = "npm-audit-" + key.toLowerCase().replaceAll("_", "-").replaceAll(" ", "-");
