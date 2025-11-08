@@ -2,6 +2,8 @@ npm-audit-sarif is a Node based tool for transforming npm audit json output to s
 
 The purpose of the tool is to transform the npm audit vulnerabilities from json to sarif format so that it can be used in Github Actions. This will allow users to see the npm vulnerabilities in the security tab in Github.
 
+Updated version of the tool.
+
 ```
    npm install npm-audit-sarif
 ```

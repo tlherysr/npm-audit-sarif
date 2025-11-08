@@ -1,8 +1,8 @@
 {
     "name": "npm-audit-sarif",
-    "version": "0.0.10",
+    "version": "0.1.0",
     "description": "A tool for converting npm-audit json output to sarif format",
-    "main": "dist/main.js",
+    "type": "module",
     "bin": {
         "npm-audit-sarif": "./npm-audit-sarif"
     },
@@ -21,13 +21,13 @@
         "Sarif",
         "SonarQube"
     ],
-    "homepage": "https://github.com/mydeveloperday/npm-audit-sarif",
+    "homepage": "https://github.com/tlherysr/npm-audit-sarif",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mydeveloperday/npm-audit-sarif"
+        "url": "https://github.com/tlherysr/npm-audit-sarif"
     },
-    "bugs": "https://github.com/mydeveloperday/npm-audit-sarif/issues",
-    "author": "MyDeveloperDay <mydeveloperday@gmail.com>",
+    "bugs": "https://github.com/tlherysr/npm-audit-sarif/issues",
+    "author": "Talha Eryasar <talhaeryasar@gmail.com>",
     "license": "MIT",
     "dependencies": {
         "node-sarif-builder": "^2.0.3",
