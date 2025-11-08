@@ -14,9 +14,9 @@
         "sonar": "sonar-scanner -X",
         "test": "jest --coverage",
         "ver": "npm version patch --no-git-tag-version",
-        "prepare": "npm run build",
-        "prepack": "npm run build"
+        "prepare": "npm run build"
     },
+    "main": "dist/main.js",
     "keywords": [
         "NPM",
         "NPM Audit",
